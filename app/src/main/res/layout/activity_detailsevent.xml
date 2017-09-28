@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.ffl.vibe.Activities.DetailseventActivity">
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    app:contentScrim="?attr/colorPrimary"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbardetailsevent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_collapseMode="pin">
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:id="@+id/imgposterdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/new_logo2"
+        app:layout_collapseMode="parallax"/>
+    <TextView
+        android:id="@+id/tveventnamedetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We're doing all"
+        android:textColor="#FFF"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"/>
+
+</android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+    <RelativeLayout
+        android:layout_below="@id/appbar"
+        android:background="@color/nliveo_brown_colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/laylocation"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:layout_width="190dp"
+        android:layout_height="120dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:id="@+id/tveventclubdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CLUB's NAME"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/nliveo_black"
+            android:layout_margin="15dp"/>
+        <TextView
+            android:id="@+id/tveventpricedetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRICE"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/nliveo_black"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/laydate"
+        android:layout_width="190dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/nliveo_black"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:id="@+id/tveventdatedetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATE"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_margin="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20/10/2017"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layguest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/laydate"
+            android:background="@color/nliveo_blue_gray_colorPrimary"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tveventguestdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guest 1"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guest 2"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guest 3"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+               />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/laysponsor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layguest"
+            android:background="@color/nliveo_blue_gray_colorPrimary"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tveventsponsordetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sponsor 1"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sponsor 2"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sponsor 3"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/laymap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/laysponsor"
+            android:background="@color/nliveo_blue_gray_colorPrimary"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tveventadressdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAP"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAP"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAP"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tvallclub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="All Club in City"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:gravity="center"/>
+</LinearLayout>
