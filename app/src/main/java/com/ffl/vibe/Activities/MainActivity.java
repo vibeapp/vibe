@@ -1,5 +1,6 @@
 package com.ffl.vibe.Activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -137,6 +138,10 @@ Toolbar toolbar;
                 break;
             case R.id.navallclub_fragment:
                 viewPager.setCurrentItem(3);
+                break;
+            case R.id.bepromote_fragment:
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
                 break;
             default:
                 viewPager.setCurrentItem(0);

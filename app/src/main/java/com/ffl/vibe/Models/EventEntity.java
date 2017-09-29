@@ -59,7 +59,8 @@ public class EventEntity implements Serializable{
     }
 
     public String getEvent_price() {
-        return Event_price;
+
+        return Event_price +"$HT a l'avance";
     }
 
     public void setEvent_price(String event_price) {
