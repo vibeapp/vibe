@@ -1,37 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/imagelv_bg"
+        android:layout_marginRight="5dip">
 
         <ImageView
             android:id="@+id/imgposter"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
             android:src="@drawable/vibe_logo" />
+    </LinearLayout>
 
         <TextView
             android:id="@+id/tveventname"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="50dp"
-            android:layout_toRightOf="@+id/imgposter"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toRightOf="@+id/thumbnail"
             android:text="Event Name"
-            android:textSize="15dp"
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tveventdate"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="Date"
-            android:textSize="15dp"
-            android:layout_alignBottom="@+id/imgposter"
-            android:layout_toEndOf="@+id/imgposter" />
-    </RelativeLayout>
-</LinearLayout>
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tveventname"
+            android:textColor="#343434"
+            android:textSize="10sp"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Sam 30 sep 2017  8h00" />
+    <TextView
+        android:id="@+id/tveventclub"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tveventdate"
+        android:textColor="#343434"
+        android:textSize="10sp"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Saxo club" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrowright"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

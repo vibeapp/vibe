@@ -25,6 +25,7 @@ public class AlleventAdapter extends ArrayAdapter<EventEntity> {
     private static class ViewHolder {
         TextView tvEventName;
         TextView tvEventdate;
+        TextView tvEventClub;
         ImageView imgposter;
     }
     public AlleventAdapter(Context context, ArrayList<EventEntity> event) {
@@ -50,6 +51,7 @@ public class AlleventAdapter extends ArrayAdapter<EventEntity> {
 
 
             viewHolder.tvEventName = (TextView) convertView.findViewById(R.id.tveventname);
+            viewHolder.tvEventClub = (TextView) convertView.findViewById(R.id.tveventclub);
             viewHolder.imgposter= (ImageView) convertView.findViewById(R.id.imgposter);
             viewHolder.tvEventdate= (TextView) convertView.findViewById(R.id.tveventdate);
             // Cache the viewHolder object inside the fresh view
@@ -63,6 +65,7 @@ public class AlleventAdapter extends ArrayAdapter<EventEntity> {
         // Populate the data from the data object via the viewHolder object
         // into the template view.
         viewHolder.tvEventName.setText(event.Event_name);
+        viewHolder.tvEventClub.setText(event.Event_club);
         viewHolder.tvEventdate.setText(event.Event_date);
         Picasso.with(getContext()).load(event.getEvent_poster()).into(viewHolder.imgposter);
 

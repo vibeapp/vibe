@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.ffl.vibe.Models.EventEntity;
 import com.ffl.vibe.R;
-
 import com.squareup.picasso.Picasso;
 
 public class DetailseventActivity extends AppCompatActivity {
@@ -25,8 +24,8 @@ public class DetailseventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailsevent);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbardetailsevent);
-        setSupportActionBar(toolbar);
+         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbardetailsevent);
+          setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_returnback);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -36,8 +35,8 @@ public class DetailseventActivity extends AppCompatActivity {
             }
         });
 
-        EventEntity event =(EventEntity) getIntent().getSerializableExtra("event");
-        tveventname= (TextView)findViewById(R.id.tveventnamedetails);
+      EventEntity event =(EventEntity) getIntent().getSerializableExtra("event");
+       tveventname= (TextView)findViewById(R.id.tveventnamedetails);
         tveventname.setText(event.getEvent_name());
 
         tveventclub= (TextView)findViewById(R.id.tveventclubdetails);

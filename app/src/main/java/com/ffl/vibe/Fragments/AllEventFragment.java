@@ -35,7 +35,7 @@ public class AllEventFragment extends Fragment {
     private int mPage;
     ListView lvAllevent;
     ArrayList<EventEntity> listEvent;
-    AlleventAdapter adapter;
+    AlleventAdapter adapterevent;
     public static AllEventFragment newInstance(int page) {
 
         Bundle args = new Bundle();
@@ -57,16 +57,16 @@ public class AllEventFragment extends Fragment {
         setHasOptionsMenu(true);
         lvAllevent=(ListView)view.findViewById(R.id.lvallevent);
         listEvent=new ArrayList<>();
-        adapter=new AlleventAdapter(getContext(),listEvent);
-        lvAllevent.setAdapter(adapter);
+        adapterevent=new AlleventAdapter(getContext(),listEvent);
+        lvAllevent.setAdapter(adapterevent);
 
         IDataStore<Map> eventstore= Backendless.Data.of("event");
 
         eventstore.find(new AsyncCallback<List<Map>>() {
             @Override
             public void handleResponse(List<Map> response) {
-                adapter.addAll(EventEntity.fromListMap(response));
-                adapter.notifyDataSetChanged();
+                adapterevent.addAll(EventEntity.fromListMap(response));
+                adapterevent.notifyDataSetChanged();
             }
 
             @Override
