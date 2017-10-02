@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.ffl.vibe.Activities.DetailseventActivity">
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme"
@@ -82,7 +83,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_location"
-                            android:text="LOCATION"
+                            android:text="Location"
                             android:textStyle="bold"
                             android:textSize="20sp"
                             android:textColor="@color/nliveo_black"
@@ -106,7 +107,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_clock"
-                            android:text="DATE"
+                            android:text="Date"
                             android:textStyle="bold"
                             android:textSize="20sp"
                             android:textColor="@color/nliveo_black"
@@ -130,7 +131,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Admission"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/nliveo_black"
+                        android:layout_margin="10dp"/>
                     <TextView
                         android:id="@+id/tveventpricedetails"
                         android:layout_width="match_parent"
@@ -139,7 +148,7 @@
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:textColor="@color/nliveo_black"
-                        android:layout_margin="15dp"/>
+                        android:layout_marginLeft="10dp"/>
                 </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
@@ -154,7 +163,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="EVENT GUEST"
+                        android:text="Guest artits"
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:textColor="@color/nliveo_black"
@@ -182,7 +191,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SPONSOR"
+                        android:text="Sponsors"
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:textColor="@color/nliveo_black"
@@ -221,4 +230,13 @@
                 </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
+<android.support.design.widget.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_fav"
+    app:elevation="6dp"
+    app:pressedTranslationZ="12dp"
+    app:layout_anchor="@+id/app_bar_layout"
+    app:layout_anchorGravity="bottom|right|end"/>
+    
 </android.support.design.widget.CoordinatorLayout>
