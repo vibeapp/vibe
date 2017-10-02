@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:padding="8dp" >
+
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/imagelv_bg"
+        android:layout_marginRight="5dip">
+    <ImageView
+        android:id="@+id/imgposterlive"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/vibe_logo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tveventnamelive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Event Name"
+        android:typeface="monospace"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/tveventdatelive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="EVENT Club"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_alignLeft="@+id/tveventnamelive"
+        android:layout_alignStart="@+id/tveventnamelive"
+        android:layout_below="@+id/tveventnamelive"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/tveventclublive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tveventdatelive"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Date"
+        android:textSize="13sp"
+        android:textColor="@color/colorAccent"/>
+
+</RelativeLayout>

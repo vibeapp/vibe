@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
+    android:layout_margin="20dp"
     tools:context="com.ffl.vibe.Activities.LoginActivity">
 <LinearLayout
     android:id="@+id/linearentete"
@@ -24,30 +24,38 @@
         android:id="@+id/linearcorp"
         android:layout_below="@+id/linearentete"
         android:layout_margin="5dp">
-
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
         <EditText
             android:id="@+id/etusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:drawableLeft="@drawable/ic_user"
+            android:drawableLeft="@drawable/ic_username"
             android:gravity="left|fill"
             android:hint="User name"
-            android:inputType="textPersonName" />
 
+            android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary">
         <EditText
             android:id="@+id/etpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edtusername"
             android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/ic_password"
+            android:drawableLeft="@drawable/ic_pass"
             android:ems="10"
             android:gravity="left|fill"
             android:hint="Password"
             android:inputType="textPassword" />
-
+        </android.support.design.widget.TextInputLayout>
         <CheckBox
             android:id="@+id/chkshowpassword"
             android:layout_width="match_parent"
@@ -58,22 +66,23 @@
         <Button
             android:id="@+id/btnlogin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_below="@+id/txtpsd"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary"
-            android:text="SIGN IN"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/buttonshape"
+            android:text="Login"
             android:textColor="@android:color/background_light"
             android:textSize="15sp" />
     </LinearLayout>
-
     <TextView
+        android:id="@+id/tvforget"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:text="FFL Group"
+        android:text="Forget Password"
         android:layout_below="@+id/linearcorp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="40dp"/>
+
 
 </RelativeLayout>

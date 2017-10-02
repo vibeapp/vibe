@@ -140,7 +140,7 @@ Toolbar toolbar;
                 viewPager.setCurrentItem(3);
                 break;
             case R.id.bepromote_fragment:
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SingupActivity.class);
                 startActivity(intent);
                 break;
             default:
