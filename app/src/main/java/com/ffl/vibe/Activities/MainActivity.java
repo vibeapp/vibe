@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.backendless.Backendless;
+import com.backendless.persistence.local.UserTokenStorageFactory;
 import com.ffl.vibe.Fragments.AdapterEventFragment;
 import com.ffl.vibe.R;
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String Secret_Key="BD512B01-8090-35EB-FF30-8DF1BED9C400";
 Toolbar toolbar;
     private DrawerLayout mDrawer;
-    private NavigationView nvDrawer;
+    public NavigationView nvDrawer;
     ViewPager viewPager;
     private ActionBarDrawerToggle drawerToggle;
     @Override
@@ -51,10 +52,26 @@ Toolbar toolbar;
 
         drawerToggle = setupDrawerToggle();
         nvDrawer = (NavigationView) findViewById(R.id.nvView);
+
+
         // Setup drawer view
         setupDrawerContent(nvDrawer);
         // Tie DrawerLayout events to the ActionBarToggle
         mDrawer.addDrawerListener(drawerToggle);
+        if(getIntent().getStringExtra("username") != null){
+            String us = (String) getIntent().getStringExtra("username");
+
+           /* if(  us.equals("samuel")){
+                nvDrawer.getMenu().findItem(R.id.bepromote_fragment).setVisible(false);
+
+            }*/
+            String userToken = UserTokenStorageFactory.instance().getStorage().get();
+            if( userToken != null && !userToken.equals( "" ) )
+            {
+                nvDrawer.getMenu().findItem(R.id.bepromote_fragment).setVisible(false);
+                nvDrawer.getMenu().findItem(R.id.createevent).setVisible(true);
+            }
+        }
 
     }
 
@@ -84,7 +101,6 @@ Toolbar toolbar;
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
-
 
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -140,7 +156,7 @@ Toolbar toolbar;
                 viewPager.setCurrentItem(3);
                 break;
             case R.id.bepromote_fragment:
-                Intent intent = new Intent(getApplicationContext(), SingupActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivity(intent);
                 break;
             default:

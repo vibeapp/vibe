@@ -2,11 +2,13 @@ package com.ffl.vibe.Activities;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
 import com.ffl.vibe.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btnlogin;
     TextView tvsignup;
     TextView tvforget;
+    String user,pass;
     final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +49,36 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "User Signed in", Toast.LENGTH_LONG).show();
+                // NavigationView navigationView = (NavigationView) findViewById(R.id.nvView);
+                if (username.getText().equals("") & password.getText().equals("")) {
+                    Toast.makeText(LoginActivity.this, "Username or password missing", Toast.LENGTH_LONG).show();
+                } else {
+                    user = username.getText().toString();
+                     pass = password.getText().toString();
+                    Backendless.UserService.login(user, pass, new AsyncCallback<BackendlessUser>() {
+                        @Override
+                        public void handleResponse(BackendlessUser response) {
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            intent.putExtra("username", user);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void handleFault(BackendlessFault fault) {
+                            Toast.makeText(LoginActivity.this, "Error Logged in", Toast.LENGTH_LONG).show();
+                            Log.d("LOGIN", fault.getMessage());
+                            Log.d("LOGIN", fault.getDetail());
+                        }
+                    });
+                    /*if (user.equals("samuel") & pass.equals("12345")) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.putExtra("username", user);
+                        startActivity(intent);
+
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Username or password missing", Toast.LENGTH_LONG).show();
+                    }*/
+                }
             }
         });
         //add onCheckedListener on Checkbox
