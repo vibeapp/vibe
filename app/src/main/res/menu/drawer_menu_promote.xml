@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"
+        android:visible="true">
+        <item
+            android:id="@+id/navallevent_fragment"
+            android:checkable="true"
+            android:checked="true"
+            android:icon="@drawable/ic_allevent"
+            android:title="All Event" />
+        <item
+            android:id="@+id/navlive_fragment"
+            android:icon="@drawable/ic_live"
+            android:title="Live" />
+
+        <item
+            android:id="@+id/navmyevent_fragment"
+            android:icon="@drawable/ic_myevent"
+            android:title="My Event" />
+        <item
+            android:id="@+id/navallclub_fragment"
+            android:icon="@drawable/ic_clubs"
+            android:title="Club" />
+
+    </group>
+    <group
+        android:id="@+id/grouppromoteuser"
+        android:checkableBehavior="single"
+        android:visible="true">
+        <item android:title="Account">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/addevent"
+                        android:icon="@drawable/ic_profil"
+                        android:title="New Event" />
+                    <item
+                    android:id="@+id/addclub"
+                    android:icon="@drawable/ic_promote"
+                    android:title="Add Club" />
+                    <item
+                        android:id="@+id/Logout"
+                        android:icon="@drawable/ic_promote"
+                        android:title="Log out" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:visible="true">
         <item
             android:id="@+id/navallevent_fragment"
             android:checkable="true"
@@ -22,6 +23,10 @@
             android:title="Club" />
 
     </group>
+    <group
+        android:id="@+id/groupsimpleuser"
+        android:checkableBehavior="single"
+        android:visible="true">
     <item android:title="Account">
         <menu>
             <group android:checkableBehavior="single">
@@ -33,8 +38,24 @@
                 <item
                     android:id="@+id/bepromote_fragment"
                     android:icon="@drawable/ic_promote"
-                    android:title="Be a Promotor" />
+                    android:title="Be a Promotor"/>
+                <item
+                    android:id="@+id/createevent"
+                    android:icon="@drawable/ic_promote"
+                    android:title="New Event"
+                    android:visible="false"/>
+                <item
+                    android:id="@+id/createclub"
+                    android:icon="@drawable/ic_promote"
+                    android:title="New Club"
+                    android:visible="false"/>
+                <item
+                    android:id="@+id/mypbublication"
+                    android:icon="@drawable/ic_promote"
+                    android:title="My Publication"
+                    android:visible="false"/>
             </group>
         </menu>
     </item>
+    </group>
 </menu>
