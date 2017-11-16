@@ -67,7 +67,8 @@ public class AlleventAdapter extends ArrayAdapter<EventEntity> {
         viewHolder.tvEventName.setText(event.Event_name);
         viewHolder.tvEventClub.setText(event.Event_club);
         viewHolder.tvEventdate.setText(event.Event_date);
-        Picasso.with(getContext()).load(event.getEvent_poster()).into(viewHolder.imgposter);
+        Picasso.with(getContext()).load(event.getEvent_poster()).placeholder(R.drawable.vibe_logo).into(viewHolder.imgposter);
+       // Picasso.with(getContext()).load(event.getEvent_poster()).into(viewHolder.imgposter);
 
         // Return the completed view to render on screen
         return convertView;

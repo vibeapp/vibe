@@ -41,19 +41,16 @@
                     android:title="Be a Promotor"/>
                 <item
                     android:id="@+id/createevent"
-                    android:icon="@drawable/ic_promote"
-                    android:title="New Event"
-                    android:visible="false"/>
+                    android:icon="@drawable/ic_newevent"
+                    android:title="New Event"/>
                 <item
                     android:id="@+id/createclub"
-                    android:icon="@drawable/ic_promote"
-                    android:title="New Club"
-                    android:visible="false"/>
+                    android:icon="@drawable/ic_newclub"
+                    android:title="New Club"/>
                 <item
                     android:id="@+id/mypbublication"
                     android:icon="@drawable/ic_promote"
-                    android:title="My Publication"
-                    android:visible="false"/>
+                    android:title="My Publication"/>
             </group>
         </menu>
     </item>

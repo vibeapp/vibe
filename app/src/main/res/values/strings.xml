@@ -3,5 +3,19 @@
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
-
+    <string name="txtusername">Username</string>
+    <string name="txtpassword">Password</string>
+    <string name="txtforget">Forget Password</string>
+    <string name="btnsignup">Create Acoount</string>
+    <string name="txtfulltname">Full name</string>
+    <string name="txtlogin">Login</string>
+    <string name="txtphone">Phone number</string>
+    <string name="txtconfirm">Re-Enter password</string>
+    <string name="txtemail">Email</string>
+    <string name="txtfragallevent">All Event</string>
+    <string name="txtfragliveevent">Live</string>
+    <string name="txtfragmyevent">My Event</string>
+    <string name="txtfragclub">Club</string>
+    <string name="txtshowpass">Show Password</string>
+    <string name="txtmember">Already a member? Login</string>
 </resources>

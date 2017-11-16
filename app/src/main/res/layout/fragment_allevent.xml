@@ -3,12 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/md_keylines"
     android:orientation="vertical">
     <ListView
         android:id="@+id/lvallevent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="#b5b5b5"
-        android:dividerHeight="1dp"
-        android:listSelector="@drawable/list_selector"/>
+        android:layout_height="match_parent"/>
 </LinearLayout>

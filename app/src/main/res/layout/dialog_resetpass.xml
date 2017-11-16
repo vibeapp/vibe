@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
     android:layout_margin="30dp">
@@ -8,18 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        android:hint="Phone number"
-        android:layout_margin="10dp"/>
+        android:hint="@string/txtphone"
+        android:layout_marginTop="75dp"/>
     <EditText android:id="@+id/etpasswordreset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Password"
-        android:layout_margin="10dp"/>
-    <EditText android:id="@+id/etconfirmpassreset"
+        android:hint="@string/txtpassword"
+        android:layout_margin="5dp"/>
+    <EditText
+        android:id="@+id/etconfirmpassreset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:layout_margin="5dp"
         android:hint="Confirm Password"
-        android:layout_margin="10dp"/>
+        android:inputType="textPassword"/>
 </LinearLayout>
