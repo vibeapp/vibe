@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:id="@+id/rlentete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fitsSystemWindows="true"
+            android:background="@color/colorPrimaryLight"
+            android:id="@+id/toolbarnewevent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryLight"
+            android:text="CANCEL"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="20dp"
+            android:textColor="@color/nliveo_white"/>
+        <Button
+            android:id="@+id/btnpublish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="PUBLISH"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimaryLight"
+            android:textColor="@color/nliveo_white"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="18dp"
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <RelativeLayout
+            android:id="@+id/rlsecond"
+            android:layout_below="@+id/toolbarnewevent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgrelative_border">
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Event category"
+            android:textColorHint="@color/colorAccent"
+            app:met_floatingLabel="normal">
+        </com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlcorp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/rlsecond"
+            android:layout_centerHorizontal="true">
+           <ImageView
+            android:id="@+id/ivneweventposter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_event"/>
+            <!-- Event Label -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tineweventname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccentgray"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ivneweventposter">
+                <EditText android:id="@+id/edtneweventname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Event Name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Event club Label -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tineweventclub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccentgray"
+                android:layout_below="@+id/ivneweventposter"
+                android:layout_marginTop="@dimen/md_keylines">
+                <EditText android:id="@+id/edtneweventclub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Club" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tineweventdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccentgray"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:layout_below="@+id/tineweventclub">
+                <EditText android:id="@+id/edtneweventdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Date" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tineweventprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccentgray"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:layout_below="@+id/tineweventdate">
+                <EditText android:id="@+id/edtneweventprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Price" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tineweventguest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccentgray"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:layout_below="@+id/tineweventprice">
+                <EditText android:id="@+id/edtneweventgest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Guest" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tineweventsponsor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccentgray"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:layout_below="@+id/tineweventguest">
+                <EditText android:id="@+id/edtneweventsponsor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Sponsor" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

@@ -21,7 +21,7 @@
             <ImageView
                 android:id="@+id/imgposterdetails"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/new_logo2"
                 app:layout_collapseMode="parallax"
@@ -78,6 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
+                        android:layout_gravity="left"
                         android:layout_margin="10dp">
                         <TextView
                             android:layout_width="match_parent"
@@ -95,33 +96,36 @@
                             android:text="adresse"
                             android:textSize="20sp"
                             android:textColor="@color/nliveo_black"
-                            android:layout_marginLeft="15dp"/>
+                            android:layout_marginLeft="20dp"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_gravity="right|"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:drawableLeft="@drawable/ic_clock"
                             android:text="Date"
-                            android:textStyle="bold"
-                            android:textSize="20sp"
                             android:textColor="@color/nliveo_black"
-                            android:layout_marginTop="15dp"/>
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:id="@+id/tveventdatedetails"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
                             android:text="date"
-                            android:textSize="20sp"
                             android:textColor="@color/nliveo_black"
-                            android:layout_marginLeft="15dp"/>
+                            android:textSize="20sp" />
                     </LinearLayout>
-                `</LinearLayout>
+                    `</LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -233,10 +237,11 @@
 <android.support.design.widget.FloatingActionButton
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginRight="15dp"
     android:src="@drawable/ic_fav"
     app:elevation="6dp"
     app:pressedTranslationZ="12dp"
     app:layout_anchor="@+id/app_bar_layout"
     app:layout_anchorGravity="bottom|right|end"/>
-    
+
 </android.support.design.widget.CoordinatorLayout>

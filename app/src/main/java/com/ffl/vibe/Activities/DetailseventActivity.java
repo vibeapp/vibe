@@ -27,7 +27,6 @@ public class DetailseventActivity extends AppCompatActivity {
          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbardetailsevent);
           setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_returnback);
-
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,8 +54,8 @@ public class DetailseventActivity extends AppCompatActivity {
         tveventsponsor.setText(event.getEvent_sponsor());
 
         imgPoster = (ImageView) findViewById(R.id.imgposterdetails);
-        Picasso.with(this).load(event.getEvent_poster())
-                .into(imgPoster);
+        Picasso.with(this).load(event.getEvent_poster()).placeholder(R.drawable.vibe_logo).into(imgPoster);
+       // Picasso.with(this).load(event.getEvent_poster()).into(imgPoster);
     }
 
 

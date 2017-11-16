@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/md_keylines">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/card_background_selector"
+        android:descendantFocusability="afterDescendants">
+        <LinearLayout android:id="@+id/thumbnail"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/imagelv_bg"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp">
+            <ImageView
+                android:id="@+id/iveventpub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vibe_sp2"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tveventnamepub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Title"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/tveventdatepub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tveventnamepub"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Description"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/md_keylines" />
+        <TextView
+            android:id="@+id/tveventclubpub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tveventdatepub"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Date"
+            android:textSize="@dimen/md_keylines"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

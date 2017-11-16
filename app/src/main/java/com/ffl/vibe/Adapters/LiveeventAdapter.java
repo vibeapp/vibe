@@ -69,7 +69,8 @@ public class LiveeventAdapter extends ArrayAdapter<EventEntity> {
         viewHolder.tvEventNamelive.setText(event.Event_name);
         viewHolder.tvEventClublive.setText(event.Event_club);
         viewHolder.tvEventdatelive.setText(event.Event_date);
-        Picasso.with(getContext()).load(event.getEvent_poster()).into(viewHolder.imgposterlive);
+        Picasso.with(getContext()).load(event.getEvent_poster()).placeholder(R.drawable.vibe_logo).into(viewHolder.imgposterlive);
+        // Picasso.with(getContext()).load(event.getEvent_poster()).into(viewHolder.imgposterlive);
 
         // Return the completed view to render on screen
         return convertView;

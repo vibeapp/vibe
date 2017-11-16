@@ -22,7 +22,9 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.DetailseventActivity" />
         <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.SignupActivity"></activity>
+        <activity android:name=".Activities.SignupActivity" />
+        <activity android:name=".Activities.CreateeventActivity" />
+        <activity android:name=".Activities.MypublicationActivity"></activity>
     </application>
 
 </manifest>

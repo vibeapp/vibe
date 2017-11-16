@@ -1,0 +1,60 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="310dp"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/md_keylines"
+    android:background="@drawable/card_background_selector"
+    android:foreground="?attr/selectableItemBackground">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgpostermy"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vibe_sp2"  />
+
+
+        <TextView
+            android:id="@+id/tveventnamemy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgpostermy"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/md_keylines"
+            tools:text="Event Name"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/article_subheading" />
+        <TextView
+            android:id="@+id/tveventclubmy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tveventnamemy"
+            android:layout_marginLeft="@dimen/md_keylines"
+            tools:text="Club"
+            android:ellipsize="end"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/md_keylines" />
+        <TextView
+            android:id="@+id/tveventdatemy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tveventclubmy"
+            android:layout_marginLeft="@dimen/md_keylines"
+            tools:text="Date"
+            android:ellipsize="end"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/md_keylines" />
+
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

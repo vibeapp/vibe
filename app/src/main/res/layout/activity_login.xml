@@ -1,88 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:fitsSystemWindows="true"
     tools:context="com.ffl.vibe.Activities.LoginActivity">
-<LinearLayout
-    android:id="@+id/linearentete"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:src="@drawable/new_logo2"/>
-</LinearLayout>
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/linearentete"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_logo2"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/linearcorp"
+        android:layout_margin="20dp"
         android:layout_below="@+id/linearentete"
-        android:layout_margin="5dp">
+        android:layout_centerHorizontal="true">
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorPrimary">
-        <EditText
-            android:id="@+id/etusername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:drawableLeft="@drawable/ic_username"
-            android:gravity="left|fill"
-            android:hint="User name"
+            android:textColorHint="@color/colorPrimaryLight">
+            <EditText
+                android:id="@+id/etusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:drawableLeft="@drawable/ic_user"
+                android:gravity="left|fill"
+                android:hint="@string/txtemail"
 
-            android:inputType="textPersonName" />
+                android:inputType="textPersonName" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorPrimary">
-        <EditText
-            android:id="@+id/etpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtusername"
-            android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/ic_pass"
-            android:ems="10"
-            android:gravity="left|fill"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:textColorHint="@color/colorPrimaryLight">
+            <EditText
+                android:id="@+id/etpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtusername"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/ic_password"
+                android:ems="10"
+                android:gravity="left|fill"
+                android:hint="@string/txtpassword"
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
         <CheckBox
             android:id="@+id/chkshowpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Show Password"/>
+            android:text="@string/txtshowpass"/>
 
 
         <Button
-            android:id="@+id/btnlogin"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_below="@+id/txtpsd"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/buttonshape"
-            android:text="Login"
-            android:textColor="@android:color/background_light"
-            android:textSize="15sp" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/tvforget"
+        android:id="@+id/btnlogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:text="Forget Password"
-        android:layout_below="@+id/linearcorp"
-        android:layout_marginTop="40dp"/>
+        android:layout_height="48dp"
+        android:layout_below="@+id/txtpsd"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/buttonshape"
+        android:text="@string/txtlogin"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/tvforget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/txtforget"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/linearcorp"
+            android:layout_marginTop="40dp"/>
+
+    </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

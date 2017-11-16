@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tvLive"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/md_keylines">
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rvmyevent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="My Preferences"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/holo_orange_dark"
-        android:gravity="center"/>
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
 </LinearLayout>

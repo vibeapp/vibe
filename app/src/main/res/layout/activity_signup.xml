@@ -1,130 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:fitsSystemWindows="true"
-tools:context="com.ffl.vibe.Activities.SignupActivity">>
-
-<LinearLayout
-    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="56dp"
-    android:paddingLeft="24dp"
-    android:paddingRight="24dp"
-    android:weightSum="1">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageView android:src="@drawable/new_logo2"
-        android:layout_width="wrap_content"
-        android:layout_height="72dp"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
-
-    <!-- Name Label -->
-    <android.support.design.widget.TextInputLayout
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
-        <EditText android:id="@+id/etfirstname"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryLight"
+            android:weightSum="1">
+            <ImageView
+                android:id="@+id/ivprofil"
+                android:layout_width="100dp"
+                android:layout_height="72dp"
+                android:src="@drawable/userpic"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="20dp"/>
+            <ImageView
+                android:id="@+id/logo"
+                android:src="@drawable/new_logo2"
+                android:layout_width="200dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"/>
+            <TextView
+                android:id="@+id/tvaddprofil"
+                android:layout_below="@+id/ivprofil"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Add Photo"
+                android:textSize="@dimen/md_keylines"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <!-- Name Label -->
+        <TextView android:id="@+id/tvBaseinfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Firstname" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Base Information"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
 
-    <!-- Address Label -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp">
-        <EditText android:id="@+id/etlastname"
+        <!-- Full Name Label -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:hint="Lastname" />
-    </android.support.design.widget.TextInputLayout>
+            android:textColorHint="@color/colorAccentgray"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <EditText android:id="@+id/etfullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Full Name" />
+        </android.support.design.widget.TextInputLayout>
 
 
 
-    <!--  Email Label -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp">
-        <EditText android:id="@+id/etemail"
+        <!--  Email Label -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
-    </android.support.design.widget.TextInputLayout>
+            android:textColorHint="@color/colorAccentgray"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <EditText android:id="@+id/etemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/txtemail" />
+        </android.support.design.widget.TextInputLayout>
 
 
-    <!-- mobile number -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp">
-        <EditText android:id="@+id/etphone"
+        <!-- mobile number -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Phone number" />
-    </android.support.design.widget.TextInputLayout>
+            android:textColorHint="@color/colorAccentgray"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <EditText android:id="@+id/etphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/txtphone" />
+        </android.support.design.widget.TextInputLayout>
 
-    <!-- Password Label -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp">
-        <EditText android:id="@+id/etpassword"
+        <!-- Password Label -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Password"/>
-    </android.support.design.widget.TextInputLayout>
+            android:textColorHint="@color/colorAccentgray"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp">
+            <EditText android:id="@+id/etpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/txtpassword"/>
+        </android.support.design.widget.TextInputLayout>
 
-    <!-- Password Re-enter Label -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp">
-        <EditText android:id="@+id/etconfirmPassword"
+        <!-- Password Re-enter Label -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Re-enter Password"/>
-    </android.support.design.widget.TextInputLayout>
+            android:textColorHint="@color/colorAccentgray"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <EditText android:id="@+id/etconfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/txtconfirm"/>
+        </android.support.design.widget.TextInputLayout>
 
-    <!-- Signup Button -->
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:padding="12dp"
-        android:background="@drawable/buttonshape"
-        android:text="Create Account"
-        android:layout_weight="0.10" />
-
-    <TextView android:id="@+id/tvlink_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Already a member? Login"
-        android:gravity="center"
-        android:textSize="16sp"/>
-
-</LinearLayout>
+        <!-- Signup Button -->
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/txtpsd"
+            android:layout_margin="25dp"
+            android:background="@drawable/buttonshape"
+            android:text="@string/btnsignup"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+        <TextView android:id="@+id/tvlink_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/txtmember"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+    </LinearLayout>
 </ScrollView>

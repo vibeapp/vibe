@@ -21,14 +21,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.backendless.Backendless;
-import com.backendless.persistence.local.UserTokenStorageFactory;
 import com.ffl.vibe.Fragments.AdapterEventFragment;
 import com.ffl.vibe.R;
 
 public class MainActivity extends AppCompatActivity {
     public static final String App_ID="324FC87E-1704-43E9-FF4D-94E49BFD9C00";
     public static final String Secret_Key="BD512B01-8090-35EB-FF30-8DF1BED9C400";
-Toolbar toolbar;
+    Toolbar toolbar;
     private DrawerLayout mDrawer;
     public NavigationView nvDrawer;
     ViewPager viewPager;
@@ -58,19 +57,15 @@ Toolbar toolbar;
         setupDrawerContent(nvDrawer);
         // Tie DrawerLayout events to the ActionBarToggle
         mDrawer.addDrawerListener(drawerToggle);
+
         if(getIntent().getStringExtra("username") != null){
             String us = (String) getIntent().getStringExtra("username");
 
-           /* if(  us.equals("samuel")){
+            if(  us.equals("eduteach@gmail.com")){
                 nvDrawer.getMenu().findItem(R.id.bepromote_fragment).setVisible(false);
 
-            }*/
-            String userToken = UserTokenStorageFactory.instance().getStorage().get();
-            if( userToken != null && !userToken.equals( "" ) )
-            {
-                nvDrawer.getMenu().findItem(R.id.bepromote_fragment).setVisible(false);
-                nvDrawer.getMenu().findItem(R.id.createevent).setVisible(true);
             }
+
         }
 
     }
@@ -158,6 +153,14 @@ Toolbar toolbar;
             case R.id.bepromote_fragment:
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.createevent:
+                Intent inten = new Intent(getApplicationContext(), CreateeventActivity.class);
+                startActivity(inten);
+                break;
+            case R.id.mypbublication:
+                Intent i = new Intent(getApplicationContext(), MypublicationActivity.class);
+                startActivity(i);
                 break;
             default:
                 viewPager.setCurrentItem(0);

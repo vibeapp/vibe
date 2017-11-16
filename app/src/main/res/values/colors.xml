@@ -2,5 +2,7 @@
 <resources>
     <color name="colorPrimary">#FFD222</color>
     <color name="colorPrimaryDark">@android:color/holo_orange_dark</color>
+    <color name="colorPrimaryLight">@android:color/holo_orange_light</color>
     <color name="colorAccent">#FF424242</color>
+    <color name="colorAccentgray">#9C6E6E6E</color>
 </resources>
